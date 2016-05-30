@@ -21,7 +21,7 @@ class GoogleApi(ApiBase):
         self.batch_size = 20
         self.method = 'GET'
 
-    def make_requests(self, scrips):
+    def make_request(self, scrips):
         """
             See base class for documentation. Contains Google specific implementation
             Warning : Throws exception. Use within try catch block
@@ -30,12 +30,12 @@ class GoogleApi(ApiBase):
         for scrip in scrips:
             scrip_string.append(scrip+':NSE')
         url = self.url_endpoint+','.join(scrip_string)
-        resp = requests.request(self.method, url)
+        resp = requests.get(url)
         if resp.status_code != requests.codes.ok:
             print >> sys.stderr, 'GOOGLE API ERROR'
             print >> sys.stderr, resp.json
             raise Exception('GOOGLE API ERROR')
-        return resp.text
+        return resp
     def process_response(self, text_responses):
         """
             See base class for documentation. Contains Google specific implementation

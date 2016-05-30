@@ -20,7 +20,7 @@ class YahooApi(ApiBase):
         self.batch_size = 25
         self.method = 'GET'
 
-    def make_requests(self, scrips):
+    def make_request(self, scrips):
         """
             See base class for documentation. Contains Yahoo specific implementation
             Warning : Throws exception. Use within try catch block
@@ -29,12 +29,12 @@ class YahooApi(ApiBase):
         for scrip in scrips:
             scrip_string.append(scrip+'.NS')
         url = self.url_endpoint+','.join(scrip_string)+'/quote?format=json'
-        resp = requests.request(self.method, url)
+        resp = requests.get(url)
         if resp.status_code != requests.codes.ok:
             print >> sys.stderr, 'YAHOO API ERROR'
             print >> sys.stderr, resp.json
             raise Exception('YAHOO API ERROR')
-        return resp.text
+        return resp
 
     def get_time(self, timezone_string, utctime):
         """

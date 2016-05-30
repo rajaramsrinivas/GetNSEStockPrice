@@ -25,6 +25,7 @@ class ApiBase:
         while current_head <= total_scrips:
             responses.append(self.make_request(scrips[current_head:current_head+self.batch_size]))
             current_head += self.batch_size
+        return self.process_response(responses)
 
     def make_request(self, scrips):
         """
