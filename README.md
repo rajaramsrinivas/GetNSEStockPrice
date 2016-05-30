@@ -8,7 +8,8 @@ Can be used both as a library as well as a command line tool
 ## Installation
 From Source
 
-```git clone https://github.com/rajaram1990/GetNSEStockPrice.git
+```bash
+   git clone https://github.com/rajaram1990/GetNSEStockPrice.git
    cd getNSEStockPrice
 ```
 To use as library perform a cp -r of the entire repo to your local code base. We're working on making this available in pip
