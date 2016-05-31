@@ -1,6 +1,8 @@
 #GetNSEStockPrice
-Simple python library that consumes HTTP REST data of sttock prices provided by Google and Yahoo Finance APIs
+Simple python library that consumes HTTP REST data of sttock prices provided by Google and Yahoo Finance APIs.
 Can be used both as a library as well as a command line tool
+
+To receive email alerts in case of failures, use the config file config.py to setup SMTP server credentials.
 
 - Rajaram, May 2016
 - License: GPL v2
