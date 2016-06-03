@@ -16,7 +16,7 @@ From Source
 ```
 To use as library perform a cp -r of the entire repo to your local code base. We're working on making this available in pip
 
-#Usage
+##Usage
 ```python
 from get_stock import get_stock_price
 
@@ -28,7 +28,7 @@ print 'Stock price of Infosys as of %s is %s'%(stocks['INFY']['timestamp'], stoc
 
 ```
 
-#From the command line
+##From the command line
 ```bash
 python get_stock.py -h
 usage: get_stock.py [-h] s
