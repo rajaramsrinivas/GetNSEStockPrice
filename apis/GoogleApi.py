@@ -52,7 +52,12 @@ class GoogleApi(ApiBase):
                     if price.startswith('Rs.'):
                         price = price[3:]
                     time = stock['lt_dts']
-                    temp_stock_dict = {'price':price, 'timestamp':time}
+                    change_in_inr = stock['c']
+                    change_in_pc = stock['cp']
+                    temp_stock_dict = {'price':price, 'timestamp':time,
+                                       'change_inr':change_in_inr,
+                                       'change_pc':change_in_pc
+                                      }
                     stock_data[stock['t']] = temp_stock_dict
                 except Exception, exception_obj:
                     print >> sys.stderr, "Error Parsing Google Response"

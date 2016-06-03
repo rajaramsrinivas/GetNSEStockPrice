@@ -9,7 +9,7 @@ parser.add_argument('scrips', metavar='s',
                     help='Comma separated list of scrips by scrip_code in NSE')
 MAX_RETRIES = 5
 
-def get_stock_price(scrips, api_preference='Yahoo', retries=0):
+def get_stock_price(scrips, api_preference='Google', retries=0):
     """
         Fetches stock prices of scrips supplied as a list of strings
     """
