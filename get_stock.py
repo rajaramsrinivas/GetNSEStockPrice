@@ -1,7 +1,7 @@
 import sys
 import argparse
-from apis.GoogleApi import GoogleApi
-from apis.YahooApi import YahooApi
+from GoogleApi import GoogleApi
+from YahooApi import YahooApi
 import email_base
 parser = argparse.ArgumentParser(description='Gets stock prices of scrips listed in NSE')
 parser.add_argument('scrips', metavar='s',
