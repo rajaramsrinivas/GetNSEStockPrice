@@ -8,22 +8,16 @@ To receive email alerts in case of failures, use the config file config.py to se
 - License: GPL v2
 
 ## Installation
-From Source
-
+pip / easy_install
 ```bash
-   git clone https://github.com/rajaram1990/GetNSEStockPrice.git
-   cd getNSEStockPrice
+   sudo pip install GetNSEStockPrice
 ```
-To use as library perform a cp -r of the entire repo to your local code base. We're working on making this available in pip
 
 ##Usage
 ```python
-from get_stock import get_stock_price
-
-scrips_to_fetch = ['RELIANCE','INFY','TATAMOTORS']
-
-stocks = get_stock_price(scrips_to_fetch)
-
+from GetNSEStockPrice import get_stock
+scrips_to_fetch = ['INFY','RELIANCE','TCS','ITC','BAJAJ-AUTO']
+stocks =  get_stock.get_stock_price(scrips_to_fetch)
 print 'Stock price of Infosys as of %s is %s'%(stocks['INFY']['timestamp'], stocks['INFY']['price'])
 
 ```
