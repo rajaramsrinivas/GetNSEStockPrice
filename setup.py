@@ -7,7 +7,7 @@ setup(
   author = 'Rajaram Srinivasan',
   author_email = 'rajaram.1990@gmail.com',
   url = 'https://github.com/rajaram1990/GetNSEStockPrice',
-  download_url = 'https://github.com/rajaram1990/GetNSEStockPrice/tarball/0.1'
+  download_url = 'https://github.com/rajaram1990/GetNSEStockPrice/tarball/0.1',
   keywords = ['Finance', 'Stock', 'NSE', 'Google', 'Yahoo', 'LTP'],
   classifiers = [],
 )
